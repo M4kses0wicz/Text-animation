@@ -36,6 +36,7 @@ body .warning-box {
   body .warning-box p {
     font-size: 47px;
     text-align: center;
+    margin-bottom: 100px;
   }
 }
 @media (max-width: 700px) and (max-width: 600px) {
