@@ -1,121 +1,121 @@
 $white: #dfdfdf;
 $black: #101010;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: $white;
-    font-family: monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $white;
+  font-family: monospace;
 }
 
-@mixin Flex-center($fd){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $fd;
+@mixin Flex-center($fd) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $fd;
 }
 
-@mixin mobile($px){
-    @media (max-width: $px) {
-        @content;
+@mixin mobile($px) {
+  @media (max-width: $px) {
+    @content;
+  }
+}
+
+body {
+  overflow: hidden;
+  height: 100svh;
+  width: 100svw;
+  background: $black;
+  @include Flex-center(column);
+  .warning-box {
+    display: none;
+    @include mobile(700px) {
+      display: block;
+      height: 100svh;
+      width: 100svw;
+      backdrop-filter: blur(27px);
+      position: absolute;
+      top: 0;
+      z-index: 999;
+      @include Flex-center(column);
+      p {
+        font-size: 47px;
+        text-align: center;
+        @include mobile(600px) {
+          font-size: 32px;
+        }
+      }
+      span {
+        font-size: 177px;
+        margin: 27px;
+      }
     }
-}
-
-body{
-    overflow: hidden;
-    height: 100svh;
-    width: 100svw;
-    background: $black;
+  }
+  main {
+    width: 97.25svw;
+    height: 700px;
     @include Flex-center(column);
-    .warning-box{
-        display: none;
-        @include mobile(700px){
+    overflow: hidden;
+    .text {
+      font-size: 17px;
+      display: flex;
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) {
+          span {
+            background: #ffffff18;
+            margin: 5px;
             display: block;
-            height: 100svh;
-            width: 100svw;
-            backdrop-filter: blur(27px);
-            position: absolute;
-            top: 0;
-            z-index: 999;
-            @include Flex-center(column);
-            p{
-                font-size: 47px;
-                text-align: center;
-                @include mobile(600px){
-                    font-size: 32px;
-                }
+            transform: translateY(50px);
+            animation: 3.5s anim ease-in-out infinite;
+            @for $j from 1 through 118 {
+              &:nth-of-type(#{$j}) {
+                animation-delay: calc(($j * 0.1s) + ($i * 0.1s));
+              }
             }
-            span{
-                font-size: 177px;
-                margin: 27px;
-            }
+          }
         }
+      }
     }
-    main{
-        width: 97.25svw;
-        height: 700px;
-        @include Flex-center(column);
-        overflow: hidden;
-        .text{
-            font-size: 17px;
-            display: flex;
-            @for $i from 1 through 10{
-                &:nth-of-type(#{$i}){
-                    span{
-                        background: #ffffff18;
-                        margin: 5px;
-                        display: block;
-                        transform: translateY(50px);
-                        animation: 3.5s anim ease-in infinite;
-                        @for $j from 1 through 87{
-                            &:nth-of-type(#{$j}){
-                                animation-delay: calc(($j * 0.1s) + ($i * 0.1s));
-                            }
-                        }
-                    }
-                }
-            }
-        }
+  }
+  .container {
+    position: absolute;
+    bottom: 5%;
+    .classic {
+      margin-bottom: 15px;
     }
-    .container{
-        position: absolute;
-        bottom: 5%;
-        .classic{
-            margin-bottom: 15px;
-        }
-        div{
-            @include Flex-center(row);
-            gap: 10px;
-        }
-        button{
-            border: 1px $white solid;
-            background: $black;
-            border-radius: 7px;
-            padding: 5px;
-            cursor: pointer;
-            transition: 0.25s;
-            @include mobile(700px){
-                width:0px;
-            }
-            &:hover{
-                transform: translateY(-2px);
-            }
-            &:active{
-                transform: translateY(1px);
-            }
-        }
+    div {
+      @include Flex-center(row);
+      gap: 10px;
     }
+    button {
+      border: 1px $white solid;
+      background: $black;
+      border-radius: 7px;
+      padding: 5px;
+      cursor: pointer;
+      transition: 0.25s;
+      @include mobile(700px) {
+        width: 0px;
+      }
+      &:hover {
+        transform: translateY(-2px);
+      }
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
 }
 
 @keyframes anim {
-    0%{
-        transform: translateY(50px) rotate(-180deg);
-    }
-    50%{
-        transform: translateY(-50px) rotate(300deg);
-    }
-    100%{
-        transform: translateY(50px) rotate(-180deg);
-    }
+  0% {
+    transform: translateY(50px) rotate(-180deg);
+  }
+  50% {
+    transform: translateY(-50px) rotate(300deg);
+  }
+  100% {
+    transform: translateY(50px) rotate(-180deg);
+  }
 }
