@@ -67,3 +67,7 @@ function Cubic_bezier5() {
     span.style.animationTimingFunction = "cubic-bezier(0.77,-1.28, 0, 1.96)";
   });
 }
+
+const currentYear = new Date().getFullYear();
+
+document.getElementById("year").textContent = currentYear;

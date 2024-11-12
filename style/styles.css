@@ -3675,7 +3675,7 @@ body main .text:nth-of-type(10) span:nth-of-type(118) {
 }
 body .container {
   position: absolute;
-  bottom: 5%;
+  bottom: 7.25%;
 }
 body .container .classic {
   margin-bottom: 15px;
@@ -3705,6 +3705,19 @@ body .container button:hover {
 }
 body .container button:active {
   transform: translateY(1px);
+}
+body .copy {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .copy p {
+  color: rgba(223, 223, 223, 0.4392156863);
+}
+body .copy p span {
+  margin-left: 2px;
+  color: rgba(223, 223, 223, 0.4392156863);
 }
 
 @keyframes anim {

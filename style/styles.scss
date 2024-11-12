@@ -81,7 +81,7 @@ body {
   }
   .container {
     position: absolute;
-    bottom: 5%;
+    bottom: 7.25%;
     .classic {
       margin-bottom: 15px;
     }
@@ -104,6 +104,19 @@ body {
       }
       &:active {
         transform: translateY(1px);
+      }
+    }
+  }
+  .copy {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    p {
+      color: #dfdfdf70;
+      span {
+        margin-left: 2px;
+        color: #dfdfdf70;
       }
     }
   }
