@@ -112,8 +112,12 @@ body {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    p {
+    a {
       color: #dfdfdf70;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
       span {
         margin-left: 2px;
         color: #dfdfdf70;
