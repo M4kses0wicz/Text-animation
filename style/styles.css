@@ -3708,7 +3708,7 @@ body .container button:active {
 }
 body .copy {
   position: absolute;
-  bottom: 10px;
+  bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
 }
