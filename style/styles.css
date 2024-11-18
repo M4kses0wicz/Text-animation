@@ -3693,7 +3693,7 @@ body .container button {
   border-radius: 7px;
   padding: 5px;
   cursor: pointer;
-  transition: 0.25s;
+  transition: 0.2s;
 }
 @media (max-width: 700px) {
   body .container button {
@@ -3708,7 +3708,7 @@ body .container button:active {
 }
 body .copy {
   position: absolute;
-  bottom: 12px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
 }

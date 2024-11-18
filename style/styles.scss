@@ -95,7 +95,7 @@ body {
       border-radius: 7px;
       padding: 5px;
       cursor: pointer;
-      transition: 0.25s;
+      transition: 0.2s;
       @include mobile(700px) {
         width: 0px;
       }
@@ -109,7 +109,7 @@ body {
   }
   .copy {
     position: absolute;
-    bottom: 12px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     a {
