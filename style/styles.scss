@@ -54,7 +54,7 @@ body {
     }
   }
   main {
-    width: 97.25svw;
+    width: 99svw;
     height: 700px;
     @include Flex-center(column);
     overflow: hidden;
@@ -128,12 +128,12 @@ body {
 
 @keyframes anim {
   0% {
-    transform: translateY(50px) rotate(-180deg);
+    transform: translateY(55px) rotate(-180deg);
   }
   50% {
-    transform: translateY(-50px) rotate(300deg);
+    transform: translateY(-55px) rotate(300deg);
   }
   100% {
-    transform: translateY(50px) rotate(-180deg);
+    transform: translateY(55px) rotate(-180deg);
   }
 }
