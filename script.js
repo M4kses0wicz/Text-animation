@@ -71,3 +71,5 @@ function Cubic_bezier5() {
 const currentYear = new Date().getFullYear();
 
 document.getElementById("year").textContent = currentYear;
+
+console.log("Made by Maksymilian Klemensowicz");
